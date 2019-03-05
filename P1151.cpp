@@ -1,11 +1,12 @@
-//https://www.luogu.org/problemnew/show/P1151
+//https://www.luogu.org/problemnew/show/
 #include<iostream>
 #include<string>
 #include<cmath>
 using namespace std;
-string sub1,sub2,sub3;
+int sub1,sub2,sub3;
 void num(int x)
 {
+    sub1=sub2=sub3=0;
     string temp;
     temp=x+'0';
     for(int i=0;i<3;i++)
@@ -23,10 +24,18 @@ void num(int x)
 }
 int main()
 {
-    int sub1=0,sub2=0,sub3=0;
+    int x;
+    cin>>x;
+
     
-    for(int 1=0;i<3000;i++)
+    
+    for(int i=10000;i<30000;i++)
     {
-        sub3=
+        num(i);
+        if(sub1%x==0&&sub2%x==0&&sub3%x==0)
+        {
+            printf("%d",i);
+        }
+    
     }
 }
